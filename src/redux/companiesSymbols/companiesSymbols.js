@@ -32,7 +32,7 @@ export const getSymbolsDispatcher = () => async (dispatch) => {
   const symbolsList = await getSymbolsFromAPI();
   const symbols = getSymbols(symbolsList);
 
-  return symbols;
+  dispatch(symbols);
 };
 
 export const getCompanyDispatcher = (company) => async (dispatch) => {
