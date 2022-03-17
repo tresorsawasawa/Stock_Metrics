@@ -19,4 +19,4 @@ const getCompanyProfileFromAPI = async (company) => {
   return result;
 };
 
-export { getSymbolsFromAPI,getCompanyProfileFromAPI };
+export { getSymbolsFromAPI, getCompanyProfileFromAPI };
