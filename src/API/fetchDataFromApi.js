@@ -1,12 +1,8 @@
 import axios from 'axios';
-import {
-  API_KEY,
-  FinancialModelingPrep_API_URL,
-  FinancialModelingPrep_CP_API_URL,
-} from './API';
+import { API_KEY, FMP_API_URL, FMP_CP_API_URL } from './API';
 
 const getSymbolsFromAPI = async () => {
-  const getData = await axios.get(FinancialModelingPrep_API_URL);
+  const getData = await axios.get(FMP_API_URL);
   const symbolsList = [];
 
   for (let i = 0; i < 100; i += 1) {
@@ -17,8 +13,10 @@ const getSymbolsFromAPI = async () => {
 };
 
 const getCompanyProfileFromAPI = async (company) => {
-  const getData = async axios.get(`${FinancialModelingPrep_CP_API_URL}${company}${API_KEY}`);
+  const getData = await axios.get(`${FMP_CP_API_URL}${company}${API_KEY}`);
   const result = getData.data[0];
 
   return result;
 };
+
+export { getSymbolsFromAPI,getCompanyProfileFromAPI };
