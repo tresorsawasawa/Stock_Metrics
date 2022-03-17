@@ -39,3 +39,49 @@ export const getCompanyDispatcher = (company) => async (dispatch) => {
   const profile = await getCompanyProfileFromAPI(company);
   dispatch(getCompany(profile));
 };
+
+const initialState = {
+  loading: true,
+};
+
+const companySymbolsReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case GET_SYMBOLS:
+      return {
+        ...state,
+        isSymbolsStored: true,
+        symbols: action.payload,
+        filteredSymbols: action.payload,
+        nbResult: action.payload.length,
+        loading: false,
+      };
+
+    case GET_COMPANY: {
+      return {
+        ...state,
+        company: action.payload,
+      };
+    }
+
+    case SEARCH_SYMBOLS: {
+      const { symbols } = state;
+      const filter = action.payload;
+      const filteredSymbolsList = symbols.filter(
+        (symbol) => symbol.symbol.toUpperCase().includes(filter)
+      );
+
+      return {
+        ...state,
+        isSymbolsStored: true,
+        symbols: state.symbols,
+        filteredSymbols: filteredSymbolsList,
+        numberResult: filteredSymbolsList.length,
+      };
+    }
+
+    default:
+      return state;
+  }
+};
+
+export default companySymbolsReducer;
