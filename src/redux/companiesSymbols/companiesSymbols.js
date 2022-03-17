@@ -67,7 +67,7 @@ const companySymbolsReducer = (state = initialState, action) => {
       const { symbols } = state;
       const filter = action.payload;
       const filteredSymbolsList = symbols.filter(
-        (symbol) => symbol.symbol.toUpperCase().includes(filter)
+        (symbol) => symbol.symbol.toUpperCase().includes(filter),
       );
 
       return {
