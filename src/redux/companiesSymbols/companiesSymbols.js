@@ -34,3 +34,8 @@ export const getSymbolsDispatcher = () => async (dispatch) => {
 
   return symbols;
 };
+
+export const getCompanyDispatcher = (company) => async (dispatch) => {
+  const profile = await getCompanyProfileFromAPI(company);
+  dispatch(getCompany(profile));
+};
