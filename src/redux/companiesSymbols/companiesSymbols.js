@@ -1,4 +1,8 @@
 import {
+  getCompanyProfileFromAPI,
+  getSymbolsFromAPI,
+} from '../../API/fetchDataFromApi';
+import {
   GET_SYMBOLS,
   SEARCH_SYMBOLS,
   GET_COMPANY,
@@ -23,3 +27,10 @@ export const getFilteredSymbols = (filter) => ({
   type: SEARCH_SYMBOLS,
   payload: filter,
 });
+
+export const getSymbolsDispatcher = () => async (dispatch) => {
+  const symbolsList = await getSymbolsFromAPI();
+  const symbols = getSymbols(symbolsList);
+
+  return symbols;
+};
