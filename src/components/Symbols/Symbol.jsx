@@ -4,11 +4,16 @@ import { Link } from 'react-router-dom';
 import { BsArrowRightCircle } from 'react-icons/bs';
 
 const Symbol = ({ symbol }) => (
-  <div className="symbol-container">
+  <div className="symbol-container" data-testid={symbol.symbol}>
     <div className="symbol-link">
       <Link to={`/company/${symbol.symbol}`}>
         <BsArrowRightCircle />
       </Link>
+    </div>
+    <div className="symbol-info">
+      <span className="symbol-symbol">{symbol.symbol}</span>
+      <span className="symbol-name">{symbol.name}</span>
+      <span className="symbol-price">{symbol.price}</span>
     </div>
   </div>
 );
