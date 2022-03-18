@@ -1,6 +1,14 @@
+import { Route, Routes } from 'react-router-dom';
+
+import SymbolPage from './components/Symbols/SymbolPage';
+import ProfileContainer from './components/Profile/ProfileContainer';
+
 const App = () => (
   <div className="App">
-    <h1 className="text-success fw-bolder">Hello from Tresor</h1>
+    <Routes>
+      <Route path="/" element={<SymbolPage />} />
+      <Route path="/company/:name" element={<ProfileContainer />} />
+    </Routes>
   </div>
 );
 
