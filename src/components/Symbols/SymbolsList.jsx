@@ -35,8 +35,8 @@ const SymbolsList = () => {
           />
         ))}
         {symbols.length === 0 && isSymbolsStored && (
-          <span className="symbols-not-found">
-            Can&rsquo;t Find Any Symbols
+          <span className="symbols-not-found pt-5 fw-bolder fs-4">
+            CAN&rsquo;T FIND THAT COMPANY
           </span>
         )}
       </div>

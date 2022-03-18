@@ -75,7 +75,7 @@ const companySymbolsReducer = (state = initialState, action) => {
         isSymbolsStored: true,
         symbols: state.symbols,
         filteredSymbols: filteredSymbolsList,
-        numberResult: filteredSymbolsList.length,
+        nbResult: filteredSymbolsList.length,
       };
     }
 

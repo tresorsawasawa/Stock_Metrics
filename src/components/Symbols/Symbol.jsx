@@ -9,7 +9,7 @@ const Symbol = ({
   <div className="symbol-container d-flex align-items-end flex-column">
     <div className="symbol-link p-3" data-testid={symbol}>
       <Link to={`/company/${symbol}`}>
-        <BsArrowRightCircle className="text-white fw-bolder fs-4" />
+        <BsArrowRightCircle className="right-arrow text-white fw-bolder fs-4" />
       </Link>
     </div>
     <div className="symbol-info d-flex align-items-end flex-column pe-3 pb-2 text-end">

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
-import { FaChevronLeft } from 'react-icons/fa';
+import { useParams } from 'react-router-dom';
 
 import { getCompanyDispatcher } from '../../redux/companiesSymbols/companiesSymbols';
 
@@ -18,27 +17,23 @@ const Profile = () => {
   }, [company.name]);
 
   return (
-    <div className="company-box">
-      <div className="go-back">
-        <Link to="/">
-          <FaChevronLeft />
-          <span>Back to Homepage</span>
-        </Link>
-      </div>
-      <div className="company-container">
-        <div className="company-header">
-          <img
-            className="profile-image"
-            src={company.image}
-            alt="logo company"
-          />
-          <div>
-            <span className="profile-symbol">{company.symbol}</span>
-            <span className="profile-name">{company.name}</span>
-            <span className="profile-companyName">{company.companyName}</span>
+    <div className="company-box d-flex flex-column">
+      <div className="company-container ">
+        <div className="company-header d-flex flex-column justify-content-start align-items-center">
+          <div className="img-container d-flex align-items-center justify-content-center">
+            <img
+              className="profile-image px-2 my-3"
+              src={company.image}
+              alt="logo company"
+            />
+          </div>
+          <div className="details d-flex justify-content-between align-items-center pb-3 flex-column">
+            <span className="profile-symbol fs-3 fw-bold">{company.symbol}</span>
+            <span className="profile-name ">{company.name}</span>
+            <span className="profile-companyName pb-3">{company.companyName}</span>
             {company.description && (
-              <span className="profile-description">
-                {company.description.substring(0, 200)}
+              <span className="profile-descr px-3 text-justify text-justify">
+                {company.description.substring(0, 250)}
                 ...
               </span>
             )}
@@ -46,56 +41,51 @@ const Profile = () => {
         </div>
         <div className="company-body">
           {company.currency && (
-            <div>
-              <span className="profile-currency">{company.currency}</span>
-              <span className="company-attribute">Currency</span>
+            <div className="p-2 d-flex justify-content-between align-items-center">
+              <span className="company-attribute fs-6">Currency</span>
+              <span className="profile-currency fw-bold">{company.currency}</span>
             </div>
           )}
           {company.industry && (
-            <div>
-              <span className="profile-currency">{company.sector}</span>
-              <span className="company-attribute">Sector</span>
+            <div className="p-2 d-flex justify-content-between align-items-center">
+              <span className="company-attribute fs-6">Sector</span>
+              <span className="profile-currency fw-bold">{company.sector}</span>
             </div>
           )}
           {company.price && (
-            <div>
-              <span className="profile-currency">{company.price}</span>
-              <span className="company-attribute">Price</span>
+            <div className="p-2 d-flex justify-content-between">
+              <span className="company-attribute fs-6">Price</span>
+              <span className="profile-currency fw-bold">{company.price}</span>
             </div>
           )}
           {company.changes && (
-            <div>
-              <span className="profile-currency">{company.changes}</span>
-              <span className="company-attribute">Changes</span>
+            <div className="p-2 d-flex justify-content-between">
+              <span className="company-attribute fs-6">Changes</span>
+              <span className="profile-currency fw-bold">{company.changes}</span>
             </div>
           )}
           {company.exchangeShortName && (
-            <div>
-              <span className="profile-currency">
+            <div className="p-2 d-flex justify-content-between">
+              <span className="company-attribute fs-6">ExchangeShortName</span>
+              <span className="profile-currency fw-bold">
                 {company.exchangeShortName}
               </span>
-              <span className="company-attribute">ExchangeShortName</span>
             </div>
           )}
           {company.country && (
-            <div>
-              <span className="profile-currency">{company.country}</span>
-              <span className="company-attribute">Country</span>
+            <div className="p-2 d-flex justify-content-between">
+              <span className="company-attribute fs-6">Country</span>
+              <span className="profile-currency fw-bold">{company.country}</span>
             </div>
           )}
+
           {company.ceo && (
-            <div>
-              <span className="profile-currency">{company.ceo}</span>
-              <span className="company-attribute">CEO</span>
+            <div className="p-2 d-flex justify-content-between">
+              <span className="company-attribute fs-6">CEO</span>
+              <span className="profile-currency fw-bold">{company.ceo}</span>
             </div>
           )}
         </div>
-      </div>
-      <div className="go-back">
-        <Link to="/">
-          <FaChevronLeft />
-          <span>Back To Homepage</span>
-        </Link>
       </div>
     </div>
   );
