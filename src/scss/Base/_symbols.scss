@@ -23,6 +23,10 @@
   }
 }
 
+.companies-list-title {
+  box-shadow: 0 3px 7px $blue-bg-sec-color;
+}
+
 @media screen and (max-width: 600px) {
   .symbol-container {
     width: calc(1 / 2 * 100% - 0.6rem) !important;
