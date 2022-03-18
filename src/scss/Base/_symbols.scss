@@ -13,14 +13,12 @@
 
     .symbol-info {
       .symbol-name {
-        font-size: 0.92rem;
+        font-size: 13px;
         overflow-wrap: break-word;
         inline-size: 150px;
       }
 
-      .symbol-price {
-        font-weight: 700;
-      }
+      .symbol-price { font-weight: 700; }
     }
   }
 }
@@ -43,8 +41,5 @@
   .symbols-container > div:nth-child(even) { background: none; }
 
   .symbols-container > div:nth-child(4n),
-  .symbols-container > div:nth-child(4n + 1) {
-    background: $blue-bg-sec-color;
-    background-size: 3px;
-  }
+  .symbols-container > div:nth-child(4n + 1) { background: $blue-bg-sec-color; }
 }
