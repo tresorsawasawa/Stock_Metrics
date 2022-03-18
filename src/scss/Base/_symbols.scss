@@ -1,0 +1,51 @@
+@import './variables';
+
+.symbols-container {
+  background-color: $blue-bg-prim-color;
+
+  & > div:nth-child(even) {
+    background: $blue-bg-sec-color;
+  }
+
+  .symbol-container {
+    width: calc(1 / 3 * 100% - 0.7rem);
+    border-bottom: 1px solid $blue-border-prim-color;
+
+    .symbol-info {
+      .symbol-name {
+        font-size: 0.92rem;
+        overflow-wrap: break-word;
+        inline-size: 150px;
+      }
+
+      .symbol-price {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .symbol-container {
+    width: calc(1 / 2 * 100% - 0.6rem) !important;
+    border-bottom: 1px solid $blue-border-prim-color;
+  }
+
+  .symbol-info {
+    .symbol-name {
+      font-size: 0.8rem;
+      overflow-wrap: break-word;
+      inline-size: 100px !important;
+      text-align: right;
+    }
+  }
+
+  .symbols-container > div:nth-child(even) { background: none; }
+
+  .symbols-container > div:nth-child(4n),
+  .symbols-container > div:nth-child(4n + 1) {
+    background: $blue-bg-sec-color;
+    background-image: url('https://jaflih.github.io/ScienceFestivalSite/assets/images/program_bg.png');
+    background-size: 3px;
+  }
+}
