@@ -1,4 +1,4 @@
-const API_KEY = '?apikey=5f3cc5710d0dccc73af8b93c551f469a';
+const API_KEY = '?apikey=e18c80063ebeb7591f698d6a8d948a73';
 const endpoint = 'https://financialmodelingprep.com/api/v3/';
 const TRADING_FEATUR_KEY = 'available-traded/list';
 const PROFILE_FEATURE = 'profile/';
