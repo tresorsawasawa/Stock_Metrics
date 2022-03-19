@@ -16,9 +16,7 @@ This project is built with:
 - ![Sass](https://img.shields.io/badge/-Sass-1d1919?style=flat&logo=sass&logoColor=ffffff&labelColor=%23CC6699)
 - ![Boostrap](https://img.shields.io/badge/-Bootstrap-1d1919?style=flat&logo=bootstrap&logoColor=ffffff&labelColor=563D7C)
 
-## Live Demo
-
-Click [here](https://tresorsawasawa.github.io/Stock_Metrics/) to see the live demo
+## [Live Demo](https://tresorsawasawa.github.io/Stock_Metrics/)
 
 ## Getting Started
 
