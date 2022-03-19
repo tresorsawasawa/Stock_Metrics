@@ -1,0 +1,14 @@
+.loader-img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #051638;
+  width: 100vw;
+  height: 100vh;
+
+  img {
+    height: 5rem;
+    width: 5rem;
+    margin: auto;
+  }
+}

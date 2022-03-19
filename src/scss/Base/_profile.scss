@@ -1,0 +1,27 @@
+@import './variables';
+
+.company-box {
+  min-width: 320px;
+
+  .company-container {
+    .company-header {
+      background-image: linear-gradient($blue-bg-prim-color, $blue-bg-sec-color);
+      box-shadow: 0 3px 7px $blue-bg-sec-color;
+    }
+
+    .profile-image {
+      min-height: 4rem;
+      min-width: 4rem;
+    }
+
+    .company-body div:nth-child(even) {
+      background-color: $blue-bg-sec-color;
+
+      .profile-attribute {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.company-attribute { text-transform: uppercase; }

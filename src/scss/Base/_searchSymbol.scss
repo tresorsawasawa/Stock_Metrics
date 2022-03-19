@@ -1,0 +1,36 @@
+@import './variables';
+
+.filter-container {
+  background-color: $dark-bg-header;
+
+  .search-input {
+    background-color: $dark-bg-input;
+    width: 60vw;
+    border-radius: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    background: $btn-bg-color;
+    border-radius: 0.5rem;
+  }
+}
+
+.search-btn {
+  background-color: $btn-bg-color;
+
+  .search_Icon { color: $white-color; }
+
+  .search-text { color: $white-color; }
+}
+
+@media screen and (max-width: 500px) {
+  .search-text { display: none; }
+
+  .search-btn { background: none !important; }
+
+  .search_Icon { font-size: 2rem; }
+}
