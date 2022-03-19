@@ -27,7 +27,7 @@ const Profile = () => {
               alt="logo company"
             />
           </div>
-          <div className="details d-flex justify-content-between align-items-center pb-3 flex-column">
+          <div className="details d-flex justify-content-between align-items-center pb-3 px-3 flex-column">
             <span className="profile-symbol fs-3 fw-bold">{company.symbol}</span>
             <span className="profile-name ">{company.name}</span>
             <span className="profile-companyName pb-3">{company.companyName}</span>
@@ -41,31 +41,31 @@ const Profile = () => {
         </div>
         <div className="company-body">
           {company.currency && (
-            <div className="p-2 d-flex justify-content-between align-items-center">
+            <div className="p-3 d-flex justify-content-between align-items-center">
               <span className="company-attribute fs-6">Currency</span>
               <span className="profile-currency fw-bold">{company.currency}</span>
             </div>
           )}
           {company.industry && (
-            <div className="p-2 d-flex justify-content-between align-items-center">
+            <div className="p-3 d-flex justify-content-between align-items-center">
               <span className="company-attribute fs-6">Sector</span>
               <span className="profile-currency fw-bold">{company.sector}</span>
             </div>
           )}
           {company.price && (
-            <div className="p-2 d-flex justify-content-between">
+            <div className="p-3 d-flex justify-content-between">
               <span className="company-attribute fs-6">Price</span>
               <span className="profile-currency fw-bold">{company.price}</span>
             </div>
           )}
           {company.changes && (
-            <div className="p-2 d-flex justify-content-between">
+            <div className="p-3 d-flex justify-content-between">
               <span className="company-attribute fs-6">Changes</span>
               <span className="profile-currency fw-bold">{company.changes}</span>
             </div>
           )}
           {company.exchangeShortName && (
-            <div className="p-2 d-flex justify-content-between">
+            <div className="p-3 d-flex justify-content-between">
               <span className="company-attribute fs-6">ExchangeShortName</span>
               <span className="profile-currency fw-bold">
                 {company.exchangeShortName}
@@ -73,14 +73,14 @@ const Profile = () => {
             </div>
           )}
           {company.country && (
-            <div className="p-2 d-flex justify-content-between">
+            <div className="p-3 d-flex justify-content-between">
               <span className="company-attribute fs-6">Country</span>
               <span className="profile-currency fw-bold">{company.country}</span>
             </div>
           )}
 
           {company.ceo && (
-            <div className="p-2 d-flex justify-content-between">
+            <div className="p-3 d-flex justify-content-between">
               <span className="company-attribute fs-6">CEO</span>
               <span className="profile-currency fw-bold">{company.ceo}</span>
             </div>

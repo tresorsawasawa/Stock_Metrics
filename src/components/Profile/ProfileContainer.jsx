@@ -7,7 +7,7 @@ import './ProfileHeader.scss';
 const ProfileContainer = () => (
   <>
     <header className="header-container">
-      <div className="header py-2">
+      <div className="header py-2 ps-2">
         <Link to="/">
           <FaChevronLeft className="back-icon" />
         </Link>
