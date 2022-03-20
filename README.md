@@ -18,8 +18,6 @@ This project is built with:
 
 ## [Live Demo](https://tresorsawasawa.github.io/Stock_Metrics/)
 
-## [Video Description](https://www.loom.com/share/07e1050fe3834259b8bf4b754c2743bf)
-
 ## Getting Started
 
 To get the content of this project locally you need to run these commands in your terminal.
