@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ![stocks-metrics](./src/stock_metrics.gif)
 ## Description
 
-> "Stock Metrics" is a website that allows users to track list of all traded and non-traded stocks within the Financial Modeling Prep API. Symbol, name, price are all included for each company on the list.
+> "Stock Metrics" is a website that allows users to track list of all traded and non-traded stocks within the Financial Modeling Prep API. Symbol, name, price are all included for each company on the list
 
 This project is built with:
 
